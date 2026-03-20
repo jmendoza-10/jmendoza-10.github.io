@@ -1,1 +1,322 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jorge Mendoza — Staff Embedded Software Engineer</title>
+  <style>
+    :root {
+      --bg: #fafafa;
+      --fg: #1a1a1a;
+      --muted: #666;
+      --border: #e0e0e0;
+      --accent: #2563eb;
+      --card-bg: #fff;
+      --tag-bg: #f0f0f0;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #111;
+        --fg: #e5e5e5;
+        --muted: #999;
+        --border: #2a2a2a;
+        --accent: #60a5fa;
+        --card-bg: #1a1a1a;
+        --tag-bg: #252525;
+      }
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      line-height: 1.6;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+    }
+
+    header { margin-bottom: 3rem; }
+
+    h1 {
+      font-size: 1.75rem;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .bio {
+      font-size: 0.95rem;
+      color: var(--fg);
+      margin-bottom: 1rem;
+    }
+
+    .contact a {
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    .contact a:hover { text-decoration: underline; }
+
+    section { margin-bottom: 2.5rem; }
+
+    h2 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--muted);
+      margin-bottom: 1rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.5rem;
+    }
+
+    .project {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.25rem;
+      margin-bottom: 1rem;
+      background: var(--card-bg);
+    }
+
+    .project h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+
+    .project h3 a {
+      color: var(--fg);
+      text-decoration: none;
+    }
+
+    .project h3 a:hover { color: var(--accent); }
+
+    .project p {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+    }
+
+    .tags { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+    .tag {
+      font-size: 0.75rem;
+      background: var(--tag-bg);
+      color: var(--muted);
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+    }
+
+    .experience-item {
+      margin-bottom: 1.25rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .experience-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .experience-item h3 {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    .experience-item .role {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .experience-item .details {
+      font-size: 0.9rem;
+      margin-top: 0.4rem;
+    }
+
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .skills-list .tag {
+      font-size: 0.8rem;
+    }
+
+    .publications {
+      font-size: 0.9rem;
+      color: var(--fg);
+    }
+
+    .publications li {
+      margin-bottom: 0.75rem;
+      list-style: none;
+    }
+
+    .publications .pub-venue {
+      color: var(--muted);
+      font-size: 0.8rem;
+      display: block;
+    }
+
+    .quote {
+      font-style: italic;
+      color: var(--muted);
+      border-left: 2px solid var(--border);
+      padding-left: 1rem;
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Jorge Mendoza</h1>
+    <div class="subtitle">Staff Embedded Software Engineer</div>
+    <p class="quote">"My passion is software logic and my vehicle is mechanical systems."</p>
+    <p class="bio">
+      Embedded software engineer with 10+ years of experience spanning connectivity, embedded systems, and cyber-physical systems.
+      Most recently focused on the connectivity software stack from cellular modem up to cloud transport,
+      where maintaining an always-on connection is the goal at the lowest power consumption — on the order of 10s of mAs.
+    </p>
+    <div class="contact">
+      <a href="https://www.linkedin.com/in/jorgeamendoza/">LinkedIn</a>
+      &nbsp;&middot;&nbsp;
+      <a href="https://github.com/jmendoza-10">GitHub</a>
+    </div>
+  </header>
+
+  <section>
+    <h2>Projects</h2>
+
+    <div class="project">
+      <h3><a href="https://github.com/jmendoza-10/BitNet">BitNet — Apple Silicon Fork</a></h3>
+      <p>
+        Fork of Microsoft's BitNet 1-bit LLM inference framework with fixes for Apple Silicon (M-series).
+        Resolved LLVM interleaved load issues that caused garbled output on ARM Macs, documented multi-core
+        build optimizations, and created a reproducible setup guide for the full inference pipeline.
+      </p>
+      <div class="tags">
+        <span class="tag">Python</span>
+        <span class="tag">C++</span>
+        <span class="tag">LLM Inference</span>
+        <span class="tag">Apple Silicon</span>
+        <span class="tag">ARM</span>
+      </div>
+    </div>
+
+    <div class="project">
+      <h3><a href="https://github.com/jmendoza-10/uds_over_ip">UDS over IP</a></h3>
+      <p>
+        C++ implementation bridging UNIX domain sockets with TCP/IP network communication.
+        Enables data relay between local UDS endpoints and remote IP clients using multithreaded socket programming.
+      </p>
+      <div class="tags">
+        <span class="tag">C++</span>
+        <span class="tag">Sockets</span>
+        <span class="tag">Networking</span>
+        <span class="tag">Multithreading</span>
+      </div>
+    </div>
+
+    <div class="project">
+      <h3><a href="https://github.com/jmendoza-10/init.lua">Neovim Configuration</a></h3>
+      <p>
+        Personal Neovim configuration forked from ThePrimeagen's init.lua.
+        Customized Lua-based setup for an efficient development workflow.
+      </p>
+      <div class="tags">
+        <span class="tag">Lua</span>
+        <span class="tag">Neovim</span>
+        <span class="tag">Developer Tools</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Experience</h2>
+
+    <div class="experience-item">
+      <h3>General Motors</h3>
+      <div class="role">Staff Embedded Software Engineer &middot; Phoenix, AZ</div>
+      <p class="details">
+        Connectivity software stack — cellular modem to cloud transport layer. Focused on always-on connection
+        reliability at minimal power draw. Six Sigma Black Belt certified (2020).
+      </p>
+    </div>
+
+    <div class="experience-item">
+      <h3>Honeywell Aerospace</h3>
+      <div class="role">Embedded Software Engineer &middot; Phoenix, AZ</div>
+      <p class="details">
+        Aerospace embedded systems. Six Sigma Green Belt certified (2016).
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Education</h2>
+    <div class="experience-item">
+      <h3>Arizona State University</h3>
+      <div class="role">2013 — 2016</div>
+      <p class="details">
+        Coursework in embedded systems, computer networks, computer science, electrical engineering,
+        and renewable energy engineering.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <div class="skills-list">
+      <span class="tag">C/C++</span>
+      <span class="tag">Python</span>
+      <span class="tag">Embedded Systems</span>
+      <span class="tag">Connectivity / Cellular</span>
+      <span class="tag">Low-Power Design</span>
+      <span class="tag">Socket Programming</span>
+      <span class="tag">Linux</span>
+      <span class="tag">ARM Architecture</span>
+      <span class="tag">RTOS</span>
+      <span class="tag">Lua</span>
+      <span class="tag">Six Sigma Black Belt</span>
+      <span class="tag">Hardware-in-the-Loop</span>
+      <span class="tag">OpenCV</span>
+      <span class="tag">Git</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>Publications</h2>
+    <ul class="publications">
+      <li>
+        Comparison of Four Different Types of Ferromagnetic Materials for Fault Current Limiter Applications
+        <span class="pub-venue">IEEE Transactions on Power Delivery, February 2013</span>
+      </li>
+      <li>
+        A Neodymium Permanent Magnet Fault Current Limiter for Use in the FREEDM Project
+        <span class="pub-venue">IEEE PES Innovative Smart Grid Technologies, October 2012</span>
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Languages</h2>
+    <div class="skills-list">
+      <span class="tag">English</span>
+      <span class="tag">Spanish</span>
+    </div>
+  </section>
+</body>
+</html>
