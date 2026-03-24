@@ -234,16 +234,18 @@
       <h3><a href="https://github.com/jmendoza-10/axon-nervous-system-poc">Axon Nervous System — POC</a></h3>
       <p>
         WiFi CSI (Channel State Information) based presence and motion sensing proof of concept.
-        ESP32-S3 boards extract channel state from WiFi signals to detect people through walls,
-        connected over a Reticulum encrypted mesh network to a real-time command dashboard
-        with cryptographic evidence chain logging.
+        ESP32-S3 boards extract 64-subcarrier channel state from WiFi signals to detect people through walls.
+        Sensor nodes communicate over a Reticulum encrypted mesh network (X25519 + AES-128 E2E encryption)
+        with store-and-forward multi-hop routing, transport abstraction across Wi-Fi and MQTT,
+        and a real-time command dashboard with SHA-256 tamper-evident cryptographic evidence chain logging.
       </p>
       <div class="tags">
         <span class="tag">C</span>
         <span class="tag">Python</span>
         <span class="tag">ESP32 / ESP-IDF</span>
         <span class="tag">WiFi CSI</span>
-        <span class="tag">Mesh Networking</span>
+        <span class="tag">Mesh / MANET Networking</span>
+        <span class="tag">Encrypted Transport</span>
         <span class="tag">Raspberry Pi</span>
       </div>
     </div>
@@ -304,6 +306,8 @@
         <li>Co-inventor on U.S. Patent Application No. 19/547,483 — <em>Method and System to Reduce Packet Latency for Wireless Communications with Vehicles</em> (recorded February 2026).</li>
         <li>Wrote middleware software that established 4G/5G cellular network connectivity for the OnStar Telematics Module (Gen12) and supported emergency calls with extensive connection retry logic for establishing an OnStar advisor connection.</li>
         <li>Developed software stack for the Multi Carrier Telematics Module (MCTM) on Cruise Autonomous Vehicles, splitting data packets across 3 Qualcomm SA415M 4G modems and re-ordering them on the backend of IPSec tunnels, achieving ~45 MB theoretical upload throughput.</li>
+        <li>Implemented a GStreamer pipeline with RTP transport and ALSA audio integration for the MCTM, enabling real-time media streaming from the autonomous vehicle to the backend operations center.</li>
+        <li>Developed eCall and Next Generation eCall (NG eCall) emergency calling systems over IMS/LTE, implementing 3GPP-defined (TS 26.267/TS 26.268) life-safety voice and data channels with priority bearer handling to ensure emergency services connectivity during vehicle incidents.</li>
         <li>Built a local web server to support vehicle controls for riders in-vehicle via an Android app UI.</li>
         <li>Six Sigma Black Belt certified (2020).</li>
       </ul>
@@ -378,10 +382,15 @@
       <span class="tag">Embedded Systems</span>
       <span class="tag">5G / LTE</span>
       <span class="tag">Wi-Fi / Bluetooth</span>
+      <span class="tag">Mesh / MANET Networking</span>
+      <span class="tag">RTP / Real-Time Media</span>
+      <span class="tag">3GPP (eCall / NG eCall)</span>
+      <span class="tag">QoS / Priority Bearers</span>
+      <span class="tag">Encrypted Transport (AES / TLS)</span>
       <span class="tag">Low-Power Design</span>
       <span class="tag">Socket Programming</span>
       <span class="tag">Software Defined Radio</span>
-      <span class="tag">Linux</span>
+      <span class="tag">Linux / Android</span>
       <span class="tag">ARM Architecture</span>
       <span class="tag">RTOS</span>
       <span class="tag">DO-178C</span>
