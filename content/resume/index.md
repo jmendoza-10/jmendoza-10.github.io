@@ -24,7 +24,8 @@ Staff Software Engineer with 13 years of experience spanning defense, aerospace,
 - Wrote middleware software that established 4G/5G cellular network connectivity for the OnStar Telematics Module (Gen12) and supported emergency calls with extensive connection retry logic for establishing an OnStar advisor connection.
 - Developed software stack for the Multi Carrier Telematics Module (MCTM) on Cruise Autonomous Vehicles, splitting data packets across 3 Qualcomm SA415M 4G modems and re-ordering them on the backend of IPSec tunnels, achieving ~45 MB theoretical upload throughput.
 - Implemented a GStreamer pipeline with RTP transport and ALSA audio integration for the MCTM, enabling real-time media streaming from the autonomous vehicle to the backend operations center.
-- Developed eCall and Next Generation eCall (NG eCall) emergency calling systems over IMS/LTE, implementing 3GPP-defined (TS 26.267/TS 26.268) life-safety voice and data channels with priority bearer handling to ensure emergency services connectivity during vehicle incidents.
+- Supported eCall and Next Generation eCall (NG eCall) emergency calling systems over IMS/LTE by understanding 3GPP system requirements (TS 26.267/TS 26.268) and implementing supporting application software for establishing emergency calls with priority bearer handling.
+- Performed eCall and commercial data link testing using the Anritsu cell simulator for hardware-in-the-loop cellular network validation.
 - Built a local web server to support vehicle controls for riders in-vehicle via an Android app UI.
 - Six Sigma Black Belt certified (2020).
 
@@ -95,7 +96,7 @@ Tool to generate 3D-printable QR codes as STL files for multi-color printing. En
 
 ## Skills
 
-`C/C++` `C#` `Python` `Lua` `Embedded Systems` `5G/LTE` `Wi-Fi/Bluetooth` `Mesh/MANET Networking` `RTP/Real-Time Media` `3GPP (eCall/NG eCall)` `QoS/Priority Bearers` `Encrypted Transport (AES/TLS)` `Low-Power Design` `Socket Programming` `Software Defined Radio` `Linux/Android` `ARM Architecture` `RTOS` `DO-178C` `Hardware-in-the-Loop` `Team Leadership` `Six Sigma Black Belt` `OpenCV` `Git`
+`C/C++` `C#` `Python` `Lua` `Embedded Systems` `5G/LTE` `Wi-Fi/Bluetooth` `Mesh/MANET Networking` `RTP/Real-Time Media` `3GPP (eCall/NG eCall)` `QoS/Priority Bearers` `Encrypted Transport (AES/TLS)` `Low-Power Design` `Socket Programming` `Software Defined Radio` `Linux/Android` `ARM Architecture` `RTOS` `DO-178C` `Anritsu Cell Simulator` `Hardware-in-the-Loop` `Team Leadership` `Six Sigma Black Belt` `OpenCV` `Git`
 
 ---
 
