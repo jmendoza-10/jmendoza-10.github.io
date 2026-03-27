@@ -1,0 +1,61 @@
+baseURL = 'https://jmendoza-10.github.io/'
+languageCode = 'en-us'
+title = 'Jorge Mendoza'
+theme = 'PaperMod'
+paginate = 5
+
+[params]
+  env = 'production'
+  description = 'Staff Software Engineer — Embedded Systems, Connectivity, Defense'
+  author = 'Jorge Mendoza'
+  defaultTheme = 'auto'
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowToc = true
+
+  [params.homeInfoParams]
+    Title = "Jorge Mendoza"
+    Content = """
+Staff Software Engineer with 13 years spanning defense, aerospace, and automotive.
+From real-time waveform processing on military radios to 4G/5G vehicle connectivity stacks.
+
+*"My passion is software logic and my vehicle is mechanical systems."*
+"""
+
+  [[params.socialIcons]]
+    name = 'github'
+    url = 'https://github.com/jmendoza-10'
+
+  [[params.socialIcons]]
+    name = 'linkedin'
+    url = 'https://www.linkedin.com/in/jorgeamendoza/'
+
+[menu]
+  [[menu.main]]
+    identifier = 'resume'
+    name = 'Resume'
+    url = '/resume/'
+    weight = 10
+
+  [[menu.main]]
+    identifier = 'blog'
+    name = 'Blog'
+    url = '/blog/'
+    weight = 20
+
+  [[menu.main]]
+    identifier = 'tags'
+    name = 'Tags'
+    url = '/tags/'
+    weight = 30
+
+[outputs]
+  home = ['HTML', 'RSS', 'JSON']
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
