@@ -59,6 +59,11 @@ Staff Software Engineer with 13 years of experience spanning defense, aerospace,
 
 ## Projects
 
+### [ESP32-S3 Wake-on-Radio](https://github.com/jmendoza-10/esp32s3-wake-on-radio)
+Low-power wake-on-radio system comparing 5 sleep/wake strategies on an ESP32-S3. Optimized the DTIM power save strategy from ~90 mA down to ~15 mA idle by tuning 802.11 listen intervals, enabling FreeRTOS tickless idle for automatic light sleep, and reducing WiFi radio active time. Includes a Raspberry Pi power telemetry dashboard with real-time INA219 current monitoring at 100 Hz, a 2-second server-side rolling average, and a one-click UDP wake trigger.
+
+`C` `ESP32/ESP-IDF` `Python` `Flask` `802.11 Power Save` `Low-Power Design` `INA219` `Raspberry Pi`
+
 ### [Mission Control Dashboard](https://github.com/jmendoza-10/mission-control-dashboard)
 Factorio-inspired 8-bit retro dashboard for monitoring AI agent scheduled tasks. Single-file HTML app with pixel art sprites, animated conveyor belts, CRT themes, 8-bit sound effects, day/night cycle, interactive task control with auto-stop timer, and a zero-dependency Python server for live status updates.
 
